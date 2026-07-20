@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Visual Identity Contest | General Education Renaissance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="21" cy="22" r="16.5" stroke="#232323" stroke-width="1"/>
+        <circle cx="21" cy="22" r="12.5" stroke="#c8a34a" stroke-width="0.75"/>
+        <path d="M21 5.5V9" stroke="#232323" stroke-width="0.75"/>
+        <path d="M21 35V38.5" stroke="#232323" stroke-width="0.75"/>
+        <path d="M4.5 22H8" stroke="#232323" stroke-width="0.75"/>
+        <path d="M34 22H37.5" stroke="#232323" stroke-width="0.75"/>
+        <path d="M21 2L22.4 5.2L21 4.3L19.6 5.2L21 2Z" fill="#c8a34a"/>
+        <text x="21" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#232323">R</text>
+      </svg>
+      <div class="word">
+        <span class="name">Gen Ed Renaissance</span>
+        <span class="tag">Renew &middot; Reimagine &middot; Rebuild</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Purpose</a>
+      <a href="resources.html">Resources</a>
+      <a href="discuss.html">Discussion</a>
+      <a href="contest.html" class="active">Visual Identity Contest</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Community Contest</div>
+    <h1>Design our Renaissance</h1>
+    <p class="lede">Help give the General Education Renaissance a visual identity. Submit
+      artwork, illustration, or design concepts that capture what this moment means for
+      SCAD &mdash; open to students, faculty, and staff.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="badge">Prompt</div>
+        <h3>What we're looking for</h3>
+        <p>A visual that captures renewal, curiosity, and human-centered progress &mdash;
+          our Sistine-Chapel-meets-modern-studio idea of what a "renaissance" looks like at
+          SCAD. Any medium: illustration, typography, photography, motion, mixed media.</p>
+      </div>
+      <div class="card">
+        <div class="badge">Eligibility</div>
+        <h3>Who can enter</h3>
+        <p>Open to all SCAD students, faculty, and staff. Individual or team submissions are
+          welcome. One primary image per entry, plus a short description.</p>
+      </div>
+      <div class="card">
+        <div class="badge">Use</div>
+        <h3>How winning work is used</h3>
+        <p>The selected concept(s) may be adapted as the visual identity for General
+          Education Renaissance communications, this toolkit site, and campus materials.
+          Questions about rights or usage: <a href="mailto:curriculum@scad.edu">curriculum@scad.edu</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="submit">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Submit an Entry</div>
+      <h2>Enter the contest</h2>
+    </div>
+
+    <div class="mode-flag" id="modeFlag"></div>
+    <div class="status-banner" id="statusBanner"></div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <form id="contestForm">
+          <label for="cTitle">Entry title</label>
+          <input type="text" id="cTitle" placeholder="e.g. Threshold" />
+
+          <label for="cName">Your name</label>
+          <input type="text" id="cName" placeholder="e.g. Jamie Alvarez" />
+
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" placeholder="you@scad.edu" />
+
+          <label for="cDesc">Description (optional)</label>
+          <textarea id="cDesc" placeholder="What's the idea behind this piece?"></textarea>
+
+          <label for="cFile">Upload image (5MB max)</label>
+          <input type="file" id="cFile" accept="image/*" required />
+
+          <p style="margin-top:18px;">
+            <button type="submit" class="btn gold">Submit entry</button>
+          </p>
+        </form>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0;">Guidelines</h3>
+        <p>File size 5MB or less. JPG, PNG, or GIF work best for preview. By submitting,
+          you confirm this is your own original work and that it may be shared publicly on
+          this site and in project communications.</p>
+        <div class="form-note">Have a larger file or a different format (video, PDF
+          portfolio)? Email it directly to <a href="mailto:curriculum@scad.edu">curriculum@scad.edu</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Gallery</div>
+      <h2>Submitted entries</h2>
+    </div>
+    <div class="gallery" id="gallery"><p class="empty-state">Loading&hellip;</p></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="ribbon">Renew Curiosity &nbsp;&middot;&nbsp; Reimagine Learning &nbsp;&middot;&nbsp; Rebuild Human Potential</div>
+  <div class="info">
+    <div class="wrap">
+      <div>General Education Renaissance &mdash; a SCAD curriculum initiative</div>
+      <div>Questions? Contact <a href="mailto:curriculum@scad.edu">curriculum@scad.edu</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/contest.js"></script>
+</body>
+</html>
