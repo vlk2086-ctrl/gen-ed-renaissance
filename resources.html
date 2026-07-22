@@ -48,13 +48,21 @@
   </div>
 </section>
 
-<section id="process">
+<nav class="side-nav" id="sideNav">
+  <a href="#process" class="side-link">Process &amp; Timeline</a>
+  <a href="#insights" class="side-link">Research Insights</a>
+  <a href="#decks" class="side-link">Survey Data &amp; Decks</a>
+  <a href="#standards" class="side-link">SACSCOC Standards</a>
+  <a href="#literature" class="side-link">Literature Review</a>
+</nav>
+
+<section id="process" class="has-sidebar">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Process &amp; Timeline</div>
       <h2>Where we are, and what this means for you</h2>
       <p>We plan to implement changes to the general education requirements of all
-        undergraduate programs in Fall 2028. This
+        undergraduate programs beginning Spring 2028, continuing through Fall 2028. This
         is a monumental moment in SCAD's curriculum history &mdash; it will affect every
         undergraduate student at SCAD, and that's exactly why we want engagement from all
         corners of the university throughout the process.</p>
@@ -101,7 +109,7 @@
   </div>
 </section>
 
-<section class="alt">
+<section class="alt has-sidebar" id="insights">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Research Insights</div>
@@ -110,14 +118,14 @@
     <div class="grid cols-2">
       <div class="card">
         <h3>Multi-stakeholder survey design</h3>
-        <p>Employers, alumni, academic leaders, and faculty were surveyed in phases &mdash;
+        <p>Employers, alumni, academic leaders, and faculty are surveyed in phases &mdash;
           starting with academic leaders &mdash; using a shared competency-priorities module so
           responses can be compared directly across groups.</p>
       </div>
       <div class="card">
         <h3>An optional AI Anxiety module</h3>
         <p>Built on the validated Wang &amp; Wang (2019) AI Anxiety Scale, this optional
-          module measured AI-related fear alongside openness to curriculum
+          module lets the study measure AI-related fear alongside openness to curriculum
           change &mdash; without forcing every respondent through it.</p>
       </div>
       <div class="card">
@@ -127,11 +135,17 @@
           because they held up both as independently "important" ratings and as forced top-5
           choices across employer, alumni, academic leader, and faculty groups.</p>
       </div>
+      <div class="card">
+        <h3>National benchmarking</h3>
+        <p>Findings are triangulated against established datasets &mdash; RNL Student
+          Satisfaction Inventory, NSSE, the Ithaka S+R Faculty Survey, and QS global employer
+          data &mdash; so SCAD's results can be read in context, not in isolation.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="decks" class="has-sidebar">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Survey Data &amp; Presentations</div>
@@ -158,7 +172,7 @@
   </div>
 </section>
 
-<section class="alt">
+<section class="alt has-sidebar" id="standards">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">SACSCOC Standards &amp; Guidance</div>
@@ -196,7 +210,7 @@
   </div>
 </section>
 
-<section id="literature">
+<section id="literature" class="has-sidebar">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Literature Review</div>
@@ -258,5 +272,27 @@
 <script src="js/supabase-config.js"></script>
 <script src="js/app.js"></script>
 <script src="js/resources.js"></script>
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.side-nav .side-link'));
+  if (!links.length) return;
+  var sections = links.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function setActive() {
+    var pos = window.scrollY + 180;
+    var current = sections[0];
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i] && sections[i].offsetTop <= pos) current = sections[i];
+    }
+    links.forEach(function (a) {
+      a.classList.toggle('active', current && a.getAttribute('href') === '#' + current.id);
+    });
+  }
+  document.addEventListener('scroll', setActive, { passive: true });
+  window.addEventListener('resize', setActive);
+  setActive();
+})();
+</script>
 </body>
 </html>

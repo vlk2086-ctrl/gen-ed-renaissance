@@ -535,6 +535,53 @@ footer.site-footer .info .wrap {
 .status-banner.ok { background: rgba(76,90,77,0.14); border: 1px solid var(--olive); color: var(--olive); }
 .status-banner.err { background: rgba(109,41,50,0.10); border: 1px solid var(--burgundy); color: var(--burgundy); }
 
+/* ---------- Side nav (resources page) ---------- */
+
+.side-nav {
+  position: fixed;
+  top: 170px;
+  left: 24px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  z-index: 20;
+}
+.side-nav .side-link {
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-soft);
+  padding: 8px 0 8px 14px;
+  border-left: 2px solid var(--line);
+  line-height: 1.3;
+}
+.side-nav .side-link:hover {
+  color: var(--ink);
+  text-decoration: none;
+  border-left-color: var(--gold-dim);
+}
+.side-nav .side-link.active {
+  color: var(--charcoal);
+  border-left-color: var(--gold);
+}
+/* On resources page, sections that share the sidebar reserve room for it
+   directly in their own padding, so the sidebar reliably fits on laptop
+   screens instead of only very wide monitors. */
+.has-sidebar .wrap {
+  max-width: calc(var(--max-width) + 190px);
+  padding-left: 190px;
+}
+
+@media (max-width: 1000px) {
+  .side-nav { display: none; }
+  .has-sidebar .wrap {
+    max-width: var(--max-width);
+    padding-left: 28px;
+  }
+}
+
 .mode-flag {
   font-size: 0.7rem;
   text-transform: uppercase;
