@@ -535,6 +535,17 @@ footer.site-footer .info .wrap {
 .status-banner.ok { background: rgba(76,90,77,0.14); border: 1px solid var(--olive); color: var(--olive); }
 .status-banner.err { background: rgba(109,41,50,0.10); border: 1px solid var(--burgundy); color: var(--burgundy); }
 
+/* ---------- Video embed (resources page) ---------- */
+
+.video-embed {
+  max-width: 860px;
+  margin: 0 auto 34px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+  border: 1px solid var(--line);
+}
+
 /* ---------- Side nav (resources page) ---------- */
 
 .side-nav {
