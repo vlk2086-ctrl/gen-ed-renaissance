@@ -1,8 +1,8 @@
 (function () {
   const CHANNELS = [
     { id: "critical-thinking", label: "Critical Thinking", desc: "Rated essential across every stakeholder group in the study, and the only skill every group still chose under pressure." },
-    { id: "adaptability-flexibility", label: "Adaptability & Flexibility", desc: "The single highest-rated competency in the study — still top 3 even when respondents were forced to pick." },
-    { id: "collaboration-teamwork", label: "Collaboration & Teamwork", desc: "The competency employers and alumni converge on most strongly." },
+    { id: "adaptability-flexibility", label: "Adaptability & Flexibility", desc: "The single highest-rated transferable skill in the study — still top 3 even when respondents were forced to pick." },
+    { id: "collaboration-teamwork", label: "Collaboration & Teamwork", desc: "The transferable skill employers and alumni converge on most strongly." },
     { id: "verbal-communication", label: "Verbal Communication", desc: "Never drops out of the top tier, no matter how the question was asked." },
     { id: "curiosity", label: "Curiosity", desc: "Consistently valued, and holds up even under forced trade-offs." },
     { id: "leadership-professionalism", label: "Leadership & Professionalism", desc: "Undervalued in the abstract — but the first thing people reach for when it actually counts." },
