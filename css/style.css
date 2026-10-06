@@ -135,6 +135,22 @@ nav.main-nav a.active {
   border-bottom: 2px solid var(--gold);
 }
 
+/* ---------- Banner (home page header image) ---------- */
+
+.banner {
+  border-bottom: 1px solid var(--line);
+  background: var(--parchment);
+  line-height: 0;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
