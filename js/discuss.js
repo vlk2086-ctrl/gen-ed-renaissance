@@ -1,11 +1,11 @@
 (function () {
   const CHANNELS = [
     { id: "critical-thinking", label: "Critical Thinking", desc: "Rated essential across every stakeholder group in the study, and the only skill every group still chose under pressure." },
-    { id: "adaptability-flexibility", label: "Adaptability & Flexibility", desc: "The single highest-rated transferable skill in the study — still top 3 even when respondents were forced to pick." },
+    { id: "adaptability-flexibility", label: "Adaptability & Flexibility", desc: "The single highest-rated transferable skill in the study, still top 3 even when respondents were forced to pick." },
     { id: "collaboration-teamwork", label: "Collaboration & Teamwork", desc: "The transferable skill employers and alumni converge on most strongly." },
     { id: "verbal-communication", label: "Verbal Communication", desc: "Never drops out of the top tier, no matter how the question was asked." },
     { id: "curiosity", label: "Curiosity", desc: "Consistently valued, and holds up even under forced trade-offs." },
-    { id: "leadership-professionalism", label: "Leadership & Professionalism", desc: "Undervalued in the abstract — but the first thing people reach for when it actually counts." },
+    { id: "leadership-professionalism", label: "Leadership & Professionalism", desc: "Undervalued in the abstract, but the first thing people reach for when it actually counts." },
   ];
 
   const channelListEl = document.getElementById("channelList");
@@ -63,7 +63,7 @@
 
   function renderPosts(posts) {
     if (!posts.length) {
-      postListEl.innerHTML = '<p class="empty-state">No posts yet in this channel &mdash; start the conversation.</p>';
+      postListEl.innerHTML = '<p class="empty-state">No posts yet in this channel. Start the conversation.</p>';
       return;
     }
     postListEl.innerHTML = posts.map((p) => `
@@ -124,7 +124,7 @@
   });
 
   modeFlag.textContent = window.GER_MODE === "demo"
-    ? "Demo mode — posts saved on this device only until Supabase is connected"
+    ? "Demo mode: posts saved on this device only until Supabase is connected"
     : "Live";
   if (window.GER_MODE !== "demo") modeFlag.style.display = "none";
 

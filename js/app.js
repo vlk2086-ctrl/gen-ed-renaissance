@@ -1,5 +1,5 @@
 /* ===========================================================
-   General Education Renaissance — shared data layer
+   General Education Renaissance: shared data layer
    Talks to Supabase when configured; otherwise falls back to
    a localStorage-backed demo store so the site is fully
    click-through-able before the backend is connected.

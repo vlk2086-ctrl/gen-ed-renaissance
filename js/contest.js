@@ -16,7 +16,7 @@
 
   function renderGallery(entries) {
     if (!entries.length) {
-      gallery.innerHTML = '<p class="empty-state">No entries yet &mdash; be the first to submit above.</p>';
+      gallery.innerHTML = '<p class="empty-state">No entries yet. Be the first to submit above.</p>';
       return;
     }
     gallery.innerHTML = entries.map((e) => `
@@ -74,7 +74,7 @@
   });
 
   modeFlag.textContent = window.GER_MODE === "demo"
-    ? "Demo mode — entries saved on this device only until Supabase is connected"
+    ? "Demo mode: entries saved on this device only until Supabase is connected"
     : "Live";
   if (window.GER_MODE !== "demo") modeFlag.style.display = "none";
 

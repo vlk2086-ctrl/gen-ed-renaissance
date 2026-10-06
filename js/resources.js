@@ -54,7 +54,7 @@
 
   function renderList(items) {
     if (!items.length) {
-      listEl.innerHTML = '<p class="empty-state">No resources yet &mdash; be the first to add one.</p>';
+      listEl.innerHTML = '<p class="empty-state">No resources yet. Be the first to add one.</p>';
       return;
     }
     listEl.innerHTML = items.map((r) => `
@@ -118,7 +118,7 @@
   });
 
   modeFlag.textContent = window.GER_MODE === "demo"
-    ? "Demo mode — saved on this device only until Supabase is connected"
+    ? "Demo mode: saved on this device only until Supabase is connected"
     : "Live";
   if (window.GER_MODE !== "demo") modeFlag.style.display = "none";
 
